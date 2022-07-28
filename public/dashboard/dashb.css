@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black url(../assets/images/th-354372434\ 1.png) no-repeat;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 30;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between !important;
+}
+nav ul li {
+  list-style-type: none;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px 35px;
+}
+.first-child {
+  background-color: white;
+  color: black;
+  padding: 10px 35px;
+}
+nav ul li a:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1);
+  opacity: 0.8;
+  transition: 1.4s ease-in;
+}
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.logo-sib {
+  display: flex;
+  align-items: center;
+}
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-info h3 {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.profile-info i {
+  display: inline;
+  color: white;
+}
+.profile-figure {
+  color: white;
+  position: relative;
+}
+.profile-figure ul {
+  display: block;
+  background-color: gold;
+  position: absolute;
+  top: 185%;
+  width: 250px;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  transform-origin: top;
+  transition: height 1.5s linear;
+}
+.profile-drop {
+  height: 300px !important;
+  overflow: visible !important;
+}
+.profile-figure ul li {
+  padding: 10px;
+  color: white;
+  text-transform: capitalize;
+}
+.grid-kid {
+  display: none;
+}
+
+.kid-first {
+  display: block;
+}
+.bet-check{
+    background-color: transparent;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.bet-check a {
+  flex-basis: 50%;
+  padding: 10px;
+  background: linear-gradient(180deg, #fae7fa 21.19%, #f8e0bc 86.92%);
+  border-radius: 10px;
+ color: black;
+  text-align: center;
+}
+.bet-check a:hover{
+    background: #dd8500!important;
+    color: white;
+}
+
+.kyc-info2,.kyc-info{
+  
+  margin: 10px;
+  padding: 10px;
+  border-radius:10px ;
+}
+.kyc-info2 p,.kyc-info p{
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.kyc-info2 li,.kyc-info li{
+  list-style-type: disc;
+  text-transform: capitalize;
+  margin-left:10px ;
+}
+.kyc-info2{
+  background: rgba(221, 133, 0, 0.27);
+}
+@media (max-width: 768px) {
+  nav ul li a {
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 0.8vh;
+  }
+  .first-child {
+    background-color: white;
+    color: black;
+    padding: 0.8vh;
+  }
+
+  .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 3vh;
+  }
+}
