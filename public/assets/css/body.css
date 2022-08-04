@@ -211,11 +211,30 @@
 
 /* swiper */
 .certification {
+  
   height: 400px;
   width: auto;
-  background: linear-gradient(180deg, #632b64 21.19%, #dd8500 86.92%);
-  opacity: 15%;
+  background: linear-gradient(180deg, #fae7fa 21.19%, #f8e0bc 86.92%);
   margin: 19px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.certification h3{
+  color: #985C03;
+
+}
+.cert{
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+.certification img{
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
 }
 
 .bet-click {
@@ -266,6 +285,7 @@
   }
   .grid-content {
     grid-template-columns: 1fr;
+    
   }
 }
 @media (max-width: 480px) {
@@ -274,5 +294,16 @@
   }
   .float-button {
     left: 0;
+  }
+  .grid-content {
+    grid-template-columns: 1fr;
+    margin: 60px 1px;
+    padding: 5px;
+  }
+  .grid-items .first-flex {
+    margin: 0 20px;
+  }
+  .cert{
+    padding: 0;
   }
 }

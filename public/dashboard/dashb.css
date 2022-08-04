@@ -3,6 +3,13 @@
   padding: 0;
   margin: 0;
 }
+
+  body{
+    background: url(../assets/images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -89,6 +96,7 @@ nav ul li a:hover {
 .profile-figure ul li {
   padding: 10px;
   color: white;
+  position: relative;
   text-transform: capitalize;
 }
 .grid-kid {
@@ -98,10 +106,10 @@ nav ul li a:hover {
 .kid-first {
   display: block;
 }
-.bet-check{
-    background-color: transparent;
-    justify-content: space-between;
-    padding: 0;
+.bet-check {
+  background-color: transparent;
+  justify-content: space-between;
+  padding: 0;
 }
 
 .bet-check a {
@@ -109,32 +117,146 @@ nav ul li a:hover {
   padding: 10px;
   background: linear-gradient(180deg, #fae7fa 21.19%, #f8e0bc 86.92%);
   border-radius: 10px;
- color: black;
+  color: black;
   text-align: center;
 }
-.bet-check a:hover{
-    background: #dd8500!important;
-    color: white;
+.bet-check a:hover {
+  background: #dd8500 !important;
+  color: white;
 }
 
-.kyc-info2,.kyc-info{
-  
+.kyc-info2,
+.kyc-info {
   margin: 10px;
   padding: 10px;
-  border-radius:10px ;
+  border-radius: 10px;
 }
-.kyc-info2 p,.kyc-info p{
+.kyc-info2 p,
+.kyc-info p {
   font-weight: 600;
   margin-bottom: 10px;
   text-transform: capitalize;
 }
-.kyc-info2 li,.kyc-info li{
+.kyc-info2 li,
+.kyc-info li {
   list-style-type: disc;
   text-transform: capitalize;
-  margin-left:10px ;
+  margin-left: 10px;
 }
-.kyc-info2{
+.kyc-info2 {
   background: rgba(221, 133, 0, 0.27);
+}
+.payment-methods {
+  margin: 10px;
+  padding: 10px;
+}
+.payment-methods h2 {
+  color: #a96d13;
+}
+.payment-methods ul {
+  margin: 20px;
+  padding: 10px;
+}
+.payment-methods ul li {
+  padding: 10px 5px;
+  font-size: 20px;
+  border-bottom: 1px solid grey;
+  color: #855814;
+  font-weight: bold;
+}
+.payment-methods ul li:hover {
+  background: #ffb03a45;
+  cursor: pointer;
+}
+.payment-methods input {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+.payment-methods input:active {
+  border: none;
+}
+.payment-methods .account {
+  display: flex;
+  justify-content: space-between;
+  grid-area: 2%;
+}
+.account figure {
+  flex-basis: 48%;
+}
+.payment-methods button {
+  width: 100%;
+  color: white;
+  background: #dd8500;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.payment-methods button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.payment-methods label {
+  text-transform: capitalize;
+  color: #dd8500;
+}
+.payment-methods table {
+  width: 100%;
+  text-align: center;
+  border: 1px solid;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.payment-methods th,
+.payment-methods td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+.payment-methods th {
+  background: #ffb03a45;
+}
+.sidenote {
+  display: flex;
+  justify-content: space-around;
+}
+.sine {
+  background: linear-gradient(180deg, #fae7fa 21.19%, #f8e0bc 86.92%);
+  border-radius: 10px;
+}
+.sidenote figure {
+  flex-basis: 50%;
+  font-weight: 600;
+  padding: 10px;
+  color: #643e13;
+  border-radius: 10px;
+  text-align: center;
+
+  text-transform: capitalize;
+}
+.sidenote figure:hover {
+  background: #dd850042;
+  cursor: pointer;
+}
+.side-note-in div {
+  display: flex;
+  justify-content: space-around;
+}
+.side-note-in div p,
+.side-note-in div h3 {
+  flex-basis: 50%;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+.side-note-in div + div{
+  border-bottom: 1px solid;
+}
+.side-note-in div:last-child{
+  border: none;
 }
 @media (max-width: 768px) {
   nav ul li a {

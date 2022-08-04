@@ -46,7 +46,9 @@
   display: flex;
   justify-content: space-between;
 }
-.btn-kid,.btn-kid2,.btn-kid3 {
+.btn-kid,
+.btn-kid2,
+.btn-kid3 {
   width: 50%;
   margin: 15px 5px;
   display: block;
@@ -58,7 +60,9 @@
   border: none;
   font-weight: bold;
 }
-.btn-kid:hover,.btn-kid2:hover,.btn-kid3:hover {
+.btn-kid:hover,
+.btn-kid2:hover,
+.btn-kid3:hover {
   background: #dd8500;
   color: black;
   cursor: pointer;
@@ -74,15 +78,23 @@
   font-size: 25px;
 }
 .sidenav ul {
-  margin: 20px;
+  margin: 5px;
 }
+
 .sidenav ul li {
   list-style-type: none;
-  padding: 10px;
+  padding: 17px;
   display: flex;
-  justify-content: space-between;
+  position: relative;
   align-items: center;
   border-radius: 10px;
+}
+.fa-chevron-right:before {
+  content: "\f054";
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .sidenav ul li .fa {
@@ -92,6 +104,9 @@
   color: #dd8500;
   background: rgba(221, 133, 0, 0.27);
   cursor: pointer;
+  transform: scale(1.01);
+  transform-origin: left;
+  transition: 1s ease;
 }
 .sidenav ul a {
   color: black;
@@ -103,7 +118,7 @@
   display: none;
   transition: all 1.5s linear;
 }
-.block{
+.block {
   display: block;
 }
 .drop:hover {
@@ -125,18 +140,84 @@ aside a:hover {
 
   transition: all 1.1s ease-out;
 }
+.cert-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
+}
+.cert-info h5 {
+  padding: 5px;
+  background: #794f0f;
+  color: white;
+}
+.cert-info p {
+  color: #dd8500;
+  text-transform: capitalize;
+}
+.price-alert {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.alert-pic {
+  width: 100px;
+  height: 25px;
+  background: #dd850033;
+
+  text-align: center;
+  position: relative;
+}
+.alert-first {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  background: #dd850091;
+  color: white;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  top: 0;
+}
+.alert-sec {
+  top: 0;
+  position: absolute;
+  right: 0;
+  width: 30px;
+  background: #dd850091;
+  color: white;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}
+.copybet {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.copybet button {
+  background: #dd8500;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+.copybet button:hover{
+  opacity: .8;
+}
 @media (max-width: 768px) {
   .wrapper-side .sidenav {
     display: none;
   }
   .dash-content {
-    margin:10px;
+    margin: 10px;
     padding: 0;
   }
- 
+
   .first-flex2 h2 {
- 
     width: 100%;
-    
   }
 }

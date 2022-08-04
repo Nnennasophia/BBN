@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,6 +22,18 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes(['verify' => true]);
+
+
+
+
+
+
+
+
+
+//new user dashboard routes
+
+Route::get('/dash_index', [App\Http\Controllers\UserdashController::class, 'dash_index'])->name('dash_index');
 
 
 
@@ -33,6 +47,4 @@ Route::get('/about', [App\Http\Controllers\VisitorController::class, 'about'])->
 Route::get('/contact', [App\Http\Controllers\VisitorController::class, 'contact'])->name('contact');
 Route::get('/privacy', [App\Http\Controllers\VisitorController::class, 'privacy'])->name('privacy');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -71,56 +71,57 @@
         </div>
       </div>
     </nav>
-    <div class="wrapper-side">
-      <div class="sidenav">
-        <div class="profile">
-          <img src="../assets/images/Ellipse 1.png" alt="profile" />
-          <h3>David</h3>
-          <p>USER ID : <span>332114567</span></p>
-        </div>
-        <hr />
-
-        <ul>
-          <a href="#"> <li>Account</li> </a>
-          <hr />
-          <span class="drop" id="1">
-            <a href="#">
-              <li>
-                withdraw
-
-                <i
-                  class="fa fa-chevron-right"
-                  id="fa"
-                  aria-hidden="true"
-                ></i></li
-            ></a>
-            <aside class="menu" id="1">
-              <a href="#">pending widthrawals</a>
-              <a href="#">widthraw funds</a>
-            </aside>
-          </span>
-          <hr />
-          <a href="./deposit.html"><li>deposit</li></a>
-          <hr />
-          <a href="#"><li>transaction history</li></a>
-          <hr />
-          <a href="#">
-            <li>
-              my bets <i class="fa fa-chevron-right" aria-hidden="true"></i></li
-          ></a>
-          <hr />
-          <a href="#"><li>kyc</li></a>
-          <hr />
-          <a href="#">
-            <li>
-              settings
-              <i class="fa fa-chevron-right" aria-hidden="true"></i></li
-          ></a>
-          <hr />
-          <a href="#"><li>log out</li></a>
-          <hr />
-        </ul>
+    <!-- wrapper-side -->
+   <div class="wrapper-side">
+    <div class="sidenav">
+      <div class="profile">
+        <img src="../assets/images/Ellipse 1.png" alt="profile" />
+        <h3>David</h3>
+        <p>USER ID : <span>332114567</span></p>
       </div>
+      <hr />
+
+      <ul>
+        <a href="#"> <li class="fa fa-user">Account</li> </a>
+        <hr />
+        <span class="drop" id="1">
+          <a href="#">
+            <li class="fa fa-download">
+              widthdraw
+              <i
+                class="fa fa-chevron-right"
+                id="fa"
+                aria-hidden="true"
+              ></i></li
+          ></a>
+          <aside class="menu" id="1">
+            <a href="#">pending widthrawals</a>
+            <a href="withdraw.html">widthraw funds</a>
+          </aside>
+        </span>
+        <hr />
+        <a href="./deposit.html"><li class="fa fa-upload">deposit</li></a>
+        <hr />
+        <a href="history.html"><li class="fa fa-usd">transaction history</li></a>
+        <hr />
+        <a href="bets.html">
+          <li class="fa fa-flag-checkered">
+            my bets <i class="fa fa-chevron-right" aria-hidden="true"></i></li
+        ></a>
+        <hr />
+        <a href="./kyc.html"><li class="fa fa-credit-card-alt">kyc</li></a>
+        <hr />
+        <a href="./settings.html">
+          <li class="fa fa-cogs">
+            settings
+            <i class="fa fa-chevron-right" aria-hidden="true"></i></li
+        ></a>
+        <hr />
+        <a href="#"><li class="fa fa-sign-out">log out</li></a>
+        <hr />
+      </ul>
+    </div>
+    <!-- end of wrapper-side -->
       <div class="grid-content dash-content">
         <div class="grid-items">
           <figure class="kyc-info">
@@ -220,11 +221,42 @@
           </div>
           <!-- updates ends here -->
 
-          <div class="contact-info">
-            <h3>CONTACT US</h3>
-            <hr />
-            <div class="certification"></div>
+         <!-- contact-info -->
+         <div class="contact-info">
+          <div class="certification">
+            <h3>current betslip</h3>
+            <div class="cert-info">
+              <p>erica to win pepsi car</p>
+              <h5>17.5</h5>
+            </div>
+            <div class="cert-info">
+              <p>erica to win pepsi car</p>
+              <h5>17.5</h5>
+            </div>
+            <div class="cert-info">
+              <p>erica to win pepsi car</p>
+              <h5>17.5</h5>
+            </div>
+            <div class="cert-info">
+              <p>erica to win pepsi car</p>
+              <h5>17.5</h5>
+            </div>
+            <figure class="price-alert">
+              <p>Amount</p>
+              <div class="alert-pic">
+                <button class="alert-first">-</button>
+                <p class="alertp">0</p>
+                <button class="alert-sec">+</button>
+              </div>
+              <p>5.87</p>
+            </figure>
+            <figure class="copybet">
+              <div width="100px" height="30px">copy bet</div>
+              <button>placebet</button>
+            </figure>
           </div>
+        </div>
+        <!-- contact-info -->
         </div>
         <!-- second grid item ends here -->
       </div>
@@ -320,6 +352,18 @@
         betId.style.display = "block";
         betAc.style.display = "none";
         betslip.style.display = "none";
+      });
+      
+      // increase in betslip
+      let down = document.querySelector(".alert-first");
+      let up = document.querySelector(".alert-sec");
+      let add = 0;
+      let increase = document.querySelector(".alertp");
+      up.addEventListener("click", () => {
+        increase.innerHTML = ++add;
+      });
+      down.addEventListener("click", () => {
+        increase.innerHTML = --add;
       });
     </script>
     <script src="../assets/js/index.js"></script>

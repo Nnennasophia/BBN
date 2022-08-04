@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="../assets/css/index.css" />
     <link rel="stylesheet" href="dashb.css" />
+    <script async src="../assets/js/info.js"></script>
   </head>
   <body>
     <!-- preloader -->
@@ -34,7 +35,7 @@
               <span class="drop" id="e1">
                 <a href="#">
                   <li>
-                    widthraw
+                    widthdraw
                     <i
                       class="fa fa-chevron-right"
                       id="fa"
@@ -43,15 +44,15 @@
                 ></a>
                 <aside class="menu" id="e1">
                   <a href="#">pending widthrawals</a>
-                  <a href="#">widthraw funds</a>
+                  <a href="withdraw.html">widthraw funds</a>
                 </aside>
               </span>
 
-              <a href="#"><li>deposit</li></a>
+              <a href="./deposit.html"><li>deposit</li></a>
 
-              <a href="#"><li>transaction history</li></a>
+              <a href="history.html"><li>transaction history</li></a>
 
-              <a href="#">
+              <a href="bets.html">
                 <li>
                   my bets
                   <i class="fa fa-chevron-right" aria-hidden="true"></i></li
@@ -59,7 +60,7 @@
 
               <a href="./kyc.html"><li>kyc</li></a>
 
-              <a href="#">
+              <a href="settings.html">
                 <li>
                   settings
                   <i class="fa fa-chevron-right" aria-hidden="true"></i></li
@@ -71,6 +72,7 @@
         </div>
       </div>
     </nav>
+    <!-- wrapper-side -->
     <div class="wrapper-side">
       <div class="sidenav">
         <div class="profile">
@@ -81,11 +83,11 @@
         <hr />
 
         <ul>
-          <a href="#"> <li>Account</li> </a>
+          <a href="#"> <li class="fa fa-user">Account</li> </a>
           <hr />
           <span class="drop" id="1">
             <a href="#">
-              <li>
+              <li class="fa fa-download">
                 widthdraw
                 <i
                   class="fa fa-chevron-right"
@@ -95,31 +97,34 @@
             ></a>
             <aside class="menu" id="1">
               <a href="#">pending widthrawals</a>
-              <a href="#">widthraw funds</a>
+              <a href="withdraw.html">widthraw funds</a>
             </aside>
           </span>
           <hr />
-          <a href="#"><li>deposit</li></a>
+          <a href="./deposit.html"><li class="fa fa-upload">deposit</li></a>
           <hr />
-          <a href="#"><li>transaction history</li></a>
+          <a href="history.html"
+            ><li class="fa fa-usd">transaction history</li></a
+          >
           <hr />
-          <a href="#">
-            <li>
+          <a href="bets.html">
+            <li class="fa fa-flag-checkered">
               my bets <i class="fa fa-chevron-right" aria-hidden="true"></i></li
           ></a>
           <hr />
-          <a href="./kyc.html"><li>kyc</li></a>
+          <a href="./kyc.html"><li class="fa fa-credit-card-alt">kyc</li></a>
           <hr />
-          <a href="#">
-            <li>
+          <a href="./settings.html">
+            <li class="fa fa-cogs">
               settings
               <i class="fa fa-chevron-right" aria-hidden="true"></i></li
           ></a>
           <hr />
-          <a href="#"><li>log out</li></a>
+          <a href="#"><li class="fa fa-sign-out">log out</li></a>
           <hr />
         </ul>
       </div>
+      <!-- end of wrapper-side -->
       <div class="grid-content dash-content">
         <div class="grid-items">
           <div class="first-flex first-flex2">
@@ -352,12 +357,42 @@
             </div>
           </div>
           <!-- updates ends here -->
-
+          <!-- contact-info -->
           <div class="contact-info">
-            <h3>CONTACT US</h3>
-            <hr />
-            <div class="certification"></div>
+            <div class="certification">
+              <h3>current betslip</h3>
+              <div class="cert-info">
+                <p>erica to win pepsi car</p>
+                <h5>17.5</h5>
+              </div>
+              <div class="cert-info">
+                <p>erica to win pepsi car</p>
+                <h5>17.5</h5>
+              </div>
+              <div class="cert-info">
+                <p>erica to win pepsi car</p>
+                <h5>17.5</h5>
+              </div>
+              <div class="cert-info">
+                <p>erica to win pepsi car</p>
+                <h5>17.5</h5>
+              </div>
+              <figure class="price-alert">
+                <p>Amount</p>
+                <div class="alert-pic">
+                  <button class="alert-first">-</button>
+                  <p class="alertp">0</p>
+                  <button class="alert-sec">+</button>
+                </div>
+                <p>5.87</p>
+              </figure>
+              <figure class="copybet">
+                <div width="100px" height="30px">copy bet</div>
+                <button>placebet</button>
+              </figure>
+            </div>
           </div>
+          <!-- contact-info -->
         </div>
         <!-- second grid item ends here -->
       </div>
@@ -422,6 +457,7 @@
       betslip
     </div>
     <div class="backdrop infodrop"></div>
+    <script src="../assets/js/dashboard.js"></script>
     <script>
       // for dashboard nav
       let Iclass = document.querySelectorAll(".fa-chevron-right");
@@ -454,9 +490,20 @@
         betAc.style.display = "none";
         betslip.style.display = "none";
       });
+
+      // increase in betslip
+      let down = document.querySelector(".alert-first");
+      let up = document.querySelector(".alert-sec");
+      let add = 0;
+      let increase = document.querySelector(".alertp");
+      up.addEventListener("click", () => {
+        increase.innerHTML = ++add;
+      });
+      down.addEventListener("click", () => {
+        increase.innerHTML = --add;
+      });
     </script>
     <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/dashboard.js"></script>
   </body>
 </html>
 <!-- drops.addEventListener("mouseleave", () => {
