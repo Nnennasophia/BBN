@@ -34,7 +34,12 @@ Auth::routes(['verify' => true]);
 //new user dashboard routes
 
 Route::get('/dash_index', [App\Http\Controllers\UserdashController::class, 'dash_index'])->name('dash_index');
-
+Route::get('/bets', [App\Http\Controllers\UserdashController::class, 'bets'])->name('bets');
+Route::get('/deposit', [App\Http\Controllers\UserdashController::class, 'deposit'])->name('deposit');
+Route::get('/history', [App\Http\Controllers\UserdashController::class, 'history'])->name('history');
+Route::get('/kyc', [App\Http\Controllers\UserdashController::class, 'kyc'])->name('kyc');
+Route::get('/settings', [App\Http\Controllers\UserdashController::class, 'settings'])->name('settings');
+Route::get('/withdraw', [App\Http\Controllers\UserdashController::class, 'withdraw'])->name('withdraw');
 
 
 

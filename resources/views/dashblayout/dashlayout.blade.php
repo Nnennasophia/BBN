@@ -44,23 +44,23 @@
                 ></a>
                 <aside class="menu" id="e1">
                   <a href="#">pending widthrawals</a>
-                  <a href="withdraw.html">widthraw funds</a>
+                  <a href="{{route('withdraw')}}">widthraw funds</a>
                 </aside>
               </span>
 
-              <a href="./deposit.html"><li>deposit</li></a>
+              <a href="{{route('deposit')}}"><li>deposit</li></a>
 
-              <a href="history.html"><li>transaction history</li></a>
+              <a href="{{route('history')}}"><li>transaction history</li></a>
 
-              <a href="bets.html">
+              <a href="{{route('bets')}}">
                 <li>
                   my bets
                   <i class="fa fa-chevron-right" aria-hidden="true"></i></li
               ></a>
 
-              <a href="./kyc.html"><li>kyc</li></a>
+              <a href="{{route('kyc')}}"><li>kyc</li></a>
 
-              <a href="settings.html">
+              <a href="{{route('settings')}}">
                 <li>
                   settings
                   <i class="fa fa-chevron-right" aria-hidden="true"></i></li

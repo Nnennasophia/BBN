@@ -7,9 +7,9 @@
     <title>Dashboard</title>
     <link
       rel="stylesheet"
-      href="../assets/font-awesome-4.7.0/css/font-awesome.min.css"
+      href="{{asset("assets/font-awesome-4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="{{asset("assets/css/index.css" />
     <link rel="stylesheet" href="dashb.css" />
   </head>
   <body>
@@ -23,7 +23,7 @@
       <div class="logo-sib">
         <div class="profile-info">
           <img
-            src="../assets/images/Ellipse 1.png"
+            src="{{asset("assets/images/Ellipse 1.png"
             width="60px"
             style="display: inline"
             alt=""
@@ -47,7 +47,7 @@
                 </aside>
               </span>
 
-              <a href="./deposit.html"><li>deposit</li></a>
+              <a href="{{route('deposit')}}"><li>deposit</li></a>
 
               <a href="#"><li>transaction history</li></a>
 
@@ -75,7 +75,7 @@
    <div class="wrapper-side">
     <div class="sidenav">
       <div class="profile">
-        <img src="../assets/images/Ellipse 1.png" alt="profile" />
+        <img src="{{asset("assets/images/Ellipse 1.png" alt="profile" />
         <h3>David</h3>
         <p>USER ID : <span>332114567</span></p>
       </div>
@@ -96,22 +96,22 @@
           ></a>
           <aside class="menu" id="1">
             <a href="#">pending widthrawals</a>
-            <a href="withdraw.html">widthraw funds</a>
+            <a href="{{route('withdraw')}}">widthraw funds</a>
           </aside>
         </span>
         <hr />
-        <a href="./deposit.html"><li class="fa fa-upload">deposit</li></a>
+        <a href="{{route('deposit')}}"><li class="fa fa-upload">deposit</li></a>
         <hr />
-        <a href="history.html"><li class="fa fa-usd">transaction history</li></a>
+        <a href="{{route('history')}}"><li class="fa fa-usd">transaction history</li></a>
         <hr />
-        <a href="bets.html">
+        <a href="{{route('bets')}}">
           <li class="fa fa-flag-checkered">
             my bets <i class="fa fa-chevron-right" aria-hidden="true"></i></li
         ></a>
         <hr />
-        <a href="./kyc.html"><li class="fa fa-credit-card-alt">kyc</li></a>
+        <a href="{{route('kyc')}}"><li class="fa fa-credit-card-alt">kyc</li></a>
         <hr />
-        <a href="./settings.html">
+        <a href="{{route('settings')}}">
           <li class="fa fa-cogs">
             settings
             <i class="fa fa-chevron-right" aria-hidden="true"></i></li
@@ -366,8 +366,8 @@
         increase.innerHTML = --add;
       });
     </script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/dashboard.js"></script>
+    <script src="{{asset("assets/js/index.js"></script>
+    <script src="{{asset("assets/js/dashboard.js"></script>
   </body>
 </html>
 <!-- drops.addEventListener("mouseleave", () => {
